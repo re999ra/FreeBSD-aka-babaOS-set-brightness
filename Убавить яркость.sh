@@ -1,0 +1,17 @@
+#!/bin/bash
+
+BRIGHTNESS_FILE=~/.brightness
+
+if [ ! -f "$BRIGHTNESS_FILE" ]; then
+  echo 65535 > "$BRIGHTNESS_FILE"
+fi
+
+CURRENT_BRIGHTNESS=$(cat "$BRIGHTNESS_FILE")
+NEW_BRIGHTNESS=$((CURRENT_BRIGHTNESS - 10000))
+
+if [ $NEW_BRIGHTNESS -lt 0 ]; then
+  NEW_BRIGHTNESS=0
+fi
+
+xbrightness $NEW_BRIGHTNESS
+echo $NEW_BRIGHTNESS > "$BRIGHTNESS_FILE"
