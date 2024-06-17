@@ -1,0 +1,18 @@
+    <keybind key="F1">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Уменьшение яркости экрана</name>
+        </startupnotify>
+        <command>"Убавить яркость.sh"</command>
+      </action>
+    </keybind>
+    <keybind key="F2">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Увеличение яркости экрана</name>
+        </startupnotify>
+        <command>"Прибавить яркость.sh"</command>
+      </action>
+    </keybind>
